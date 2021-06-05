@@ -1,4 +1,4 @@
-### MEDIDAS DE CONCENTRAÇÃO E DESIGUALDADE
+### MEDIDAS DE CONCENTRAÃ‡Ä‚O E DESIGUALDADE
 
 install.packages('ineq')
 
@@ -26,7 +26,7 @@ plot(clorenz, main='Curva de Lorenz', col=4)
 
 ###########################################
 
-# índice de gini
+# Ã­ndice de gini
 
 x <- c(0,3.75)
 
@@ -50,7 +50,7 @@ text(0.2, 0.9, 'G=0.5', cex=1.5)
 
 ###########################################
 
-# discrepância máxima
+# discrepÃ¢ncia mÃ¡xima
 
 jmax = which.max(clorenz$p - clorenz$L)
 Lmax = clorenz$p[jmax] - clorenz$L[jmax]
@@ -69,7 +69,7 @@ text(clorenz$p[jmax]+0.07,
 
 ###########################################
 
-# exemplo bilionários
+# exemplo bilionÃ¡rios
 
 install.packages('gglorenz')
 
@@ -82,8 +82,8 @@ ggplot(billionaires, aes(TNW)) +
   stat_lorenz()+
   annotate_ineq(billionaires$TNW) +
   geom_abline(linetype='dashed') +
-  labs(title='Índice de Gini de patrimônio',
-       x='Patrimônio líquido',
+  labs(title='Ãndice de Gini de patrimÃ´nio',
+       x='PatrimÃ´nio lÃ­quido',
        y=' ',
        caption='Dados de 2021')
 
@@ -93,7 +93,7 @@ ggplot(billionaires, aes(TNW)) +
   stat_lorenz(desc=T)+
   geom_abline(linetype='dashed') +
   annotate_ineq(billionaires$TNW) +
-  labs(title='Índice de Gini do patrimônio de bilionários') +
+  labs(title='Ãndice de Gini do patrimÃ´nio de bilionÃ¡rios')
   
 
 
